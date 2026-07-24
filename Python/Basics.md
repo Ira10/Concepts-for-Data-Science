@@ -18,9 +18,9 @@ print(type(a))
 print(id(a))
 ```
 
-5
-<class 'int'>
-4348847000
+5  
+<class 'int'>  
+4348847000  
 
 
 ```
@@ -30,9 +30,9 @@ print(type(a))
 print(id(a))
 ```
 
-5.0
-<class 'float'>
-4473310800
+5.0  
+<class 'float'>  
+4473310800  
 
 8. Variables - One single value at a single time ~ Imperative Knowledge, unlike Maths.
    Variables bind names to objects.
