@@ -1,5 +1,6 @@
 # Ankit Bansal Complex SQL Playlist  
-(link - https://youtube.com/playlist?list=PLBTZqjSKn0IeKBQDjLmzisazhqQy4iGkb&si=FvqEB_MTceoJ_8KF)
+(link - https://youtube.com/playlist?list=PLBTZqjSKn0IeKBQDjLmzisazhqQy4iGkb&si=FvqEB_MTceoJ_8KF)  
+SQL Practice Ground - https://sqliteonline.com/
 
 
 **1. Complex SQL Query 1 | Derive Points table for ICC tournament**
