@@ -19,7 +19,8 @@ INSERT INTO icc_world_cup values('Aus','India','India');
 select * from icc_world_cup;
 
 
-`with base as (
+```
+with base as (
 select team_1 AS team,
        CAse when team_1 = winner then 1 else 0 end as win_flag
 
@@ -40,4 +41,6 @@ FROM icc_world_cup
   
   from base
   GROUP BY team
-`
+```
+
+
