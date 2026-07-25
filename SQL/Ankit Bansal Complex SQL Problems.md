@@ -43,4 +43,78 @@ FROM icc_world_cup
   GROUP BY team
 ```
 
+**2. Find new and repeat customers**
+
+create table customer_orders (  
+order_id integer,  
+customer_id integer,  
+order_date date,  
+order_amount integer  
+);  
+select * from customer_orders  ;
+insert into customer_orders values(1,100,cast('2022-01-01' as date),2000),(2,200,cast('2022-01-01' as date),2500),(3,300,cast('2022-01-01' as date),2100)  
+,(4,100,cast('2022-01-02' as date),2000),(5,400,cast('2022-01-02' as date),2200),(6,500,cast('2022-01-02' as date),2700)  
+,(7,100,cast('2022-01-03' as date),3000),(8,400,cast('2022-01-03' as date),1000),(9,600,cast('2022-01-03' as date),3000);  
+
+
+```
+SELECT *
+
+
+```
+
+
+
+
+**3. Scenario based Interviews Question for Product companies**
+
+create table entries (   
+name varchar(20),  
+address varchar(20),  
+email varchar(20),  
+floor int,  
+resources varchar(10));  
+
+insert into entries   
+values ('A','Bangalore','A@gmail.com',1,'CPU'),('A','Bangalore','A1@gmail.com',1,'CPU'),('A','Bangalore','A2@gmail.com',2,'DESKTOP')  
+,('B','Bangalore','B@gmail.com',2,'DESKTOP'),('B','Bangalore','B1@gmail.com',2,'DESKTOP'),('B','Bangalore','B2@gmail.com',1,'MONITOR')  
+
+
+
+
+```
+SELECT *
+
+```
+
+
+**4. Write a query to provide the nth occurence of Sunday in future from given date.**
+
+```
+
+selecrt
+
+gg
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
