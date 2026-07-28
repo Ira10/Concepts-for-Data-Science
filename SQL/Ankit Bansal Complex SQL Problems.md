@@ -79,9 +79,16 @@ GROUP BY customer_id
  FROM base b 
  JOIN customer_orders ca ON b.customer_id = ca.customer_id
  GROUP BY ca.order_date
-
-
 ```
+
+
+| order_date   | new_customers  | repeat_customers |
+| :---         |     :---:      |          ---:    |
+| 2022-01-01   |     3          |          0       |
+| 2022-01-02   |       2        |           1      |
+| 2022-01-03   |      1         |           2       |
+
+
 
 
 
