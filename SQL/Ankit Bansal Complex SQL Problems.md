@@ -144,11 +144,15 @@ Usage of **GROUP_CONCAT** is here <ins>so we can aggregate string characters and
 
 ```
 
-selecrt
+SELECT strftime('%w', 'now');
 
-gg
 
 ```
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**5. gghh.**
+
+
 
 
 
