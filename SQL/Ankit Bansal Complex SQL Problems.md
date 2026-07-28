@@ -46,20 +46,39 @@ FROM icc_world_cup
 
 **2. Find new and repeat customers**
 
-create table customer_orders (  
-order_id integer,  
-customer_id integer,  
-order_date date,  
-order_amount integer  
-);  
-select * from customer_orders  ;
-insert into customer_orders values(1,100,cast('2022-01-01' as date),2000),(2,200,cast('2022-01-01' as date),2500),(3,300,cast('2022-01-01' as date),2100)  
-,(4,100,cast('2022-01-02' as date),2000),(5,400,cast('2022-01-02' as date),2200),(6,500,cast('2022-01-02' as date),2700)  
-,(7,100,cast('2022-01-03' as date),3000),(8,400,cast('2022-01-03' as date),1000),(9,600,cast('2022-01-03' as date),3000);  
+CREATE TABLE customer_orders (. 
+    order_id INTEGER,
+    customer_id INTEGER,  
+    order_date TEXT,  
+    order_amount INTEGER);   
+
+INSERT INTO customer_orders 
+VALUES  
+(1,100,'2022-01-01',2000),  
+(2,200,'2022-01-01',2500),  
+(3,300,'2022-01-01',2100),  
+(4,100,'2022-01-02',2000),  
+(5,400,'2022-01-02',2200),  
+(6,500,'2022-01-02',2700),  
+(7,100,'2022-01-03',3000),  
+(8,400,'2022-01-03',1000),  
+(9,600,'2022-01-03',3000);  
 
 
 ```
-SELECT *
+WITH base AS
+(
+SELECT customer_id, MIN(order_date) AS first_order_date
+FROM customer_orders
+GROUP BY customer_id
+  )
+
+ SELECT ca.order_date,
+        COUNT(CASE WHEN ca.order_date = b.first_order_date THEN ca.customer_id END) AS new_customers,
+        COUNT(CASE WHEN ca.order_date != b.first_order_date THEN ca.customer_id END) AS repeat_customers
+ FROM base b 
+ JOIN customer_orders ca ON b.customer_id = ca.customer_id
+ GROUP BY ca.order_date
 
 
 ```
