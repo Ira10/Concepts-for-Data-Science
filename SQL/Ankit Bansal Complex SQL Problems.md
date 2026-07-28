@@ -123,7 +123,7 @@ SELECT
       COUNT(1) AS total_visits,
       max(case when rank_ = 1 then entries.floor end) AS most_visited_floor,
       --string_agg(resources, ', ') AS resources_used
-      **REPLACE(GROUP_CONCAT(** DISTINCT entries.resources),',', ', ') AS resources_used
+      REPLACE(GROUP_CONCAT(DISTINCT entries.resources),',', ', ') AS resources_used
 
 FROM entries 
 join base on entries.name = base.name
@@ -132,6 +132,7 @@ join base on entries.name = base.name
 GROUP by entries.name
 
 ```
+Usage of **GROUP_CONCAT** is here <ins>so we can aggregate string characters and can pick unique items.</ins>
 
 | Name | Total Visits | Most Visited Floor | Resources Used |
 |------|-------------:|-------------------:|----------------|
