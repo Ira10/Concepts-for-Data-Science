@@ -2,7 +2,7 @@
 (link - https://youtube.com/playlist?list=PLBTZqjSKn0IeKBQDjLmzisazhqQy4iGkb&si=FvqEB_MTceoJ_8KF)  
 SQL Practice Ground - https://sqliteonline.com/
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 **1. Complex SQL Query 1 | Derive Points table for ICC tournament**
 
 create table icc_world_cup
@@ -43,7 +43,7 @@ FROM icc_world_cup
   from base
   GROUP BY team
 ```
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 **2. Find new and repeat customers**
 
 CREATE TABLE customer_orders (. 
@@ -91,7 +91,7 @@ GROUP BY customer_id
 
 
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **3. Scenario based Interviews Question for Product companies**
 
@@ -107,14 +107,38 @@ values ('A','Bangalore','A@gmail.com',1,'CPU'),('A','Bangalore','A1@gmail.com',1
 ,('B','Bangalore','B@gmail.com',2,'DESKTOP'),('B','Bangalore','B1@gmail.com',2,'DESKTOP'),('B','Bangalore','B2@gmail.com',1,'MONITOR')  
 
 
+```
+WITH base AS (
+SELECT name, 
+       floor,
+       count(1) AS visits,
+       ROW_NUMBER() OVER(Partition by name ORDER by count(1) DESC) AS rank_
+from entries
+GROUP BY name, floor
+)
 
+
+SELECT 
+      entries.name, 
+      COUNT(1) AS total_visits,
+      max(case when rank_ = 1 then entries.floor end) AS most_visited_floor,
+      --string_agg(resources, ', ') AS resources_used
+      **REPLACE(GROUP_CONCAT(** DISTINCT entries.resources),',', ', ') AS resources_used
+
+FROM entries 
+join base on entries.name = base.name
+         AND entries.floor = base.floor
+
+GROUP by entries.name
 
 ```
-SELECT *
 
-```
+| Name | Total Visits | Most Visited Floor | Resources Used |
+|------|-------------:|-------------------:|----------------|
+| A    | 3            | 1                  | CPU, DESKTOP   |
+| B    | 3            | 2                  | DESKTOP, MONITOR |
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 **4. Write a query to provide the nth occurence of Sunday in future from given date.**
 
 ```
