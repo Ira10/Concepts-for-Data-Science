@@ -30,14 +30,14 @@ Overall Risk
 
 V1
 
-One local app/backend
-Chrome + Brave + Edge + Arc
-Safari support
-Current-page extraction
-T&C detection
-Local Hugging Face LLM
-Structured analysis
-Your exact output format
-Section-level source references
-No cloud/API calls
-No access to anything except the page you explicitly ask it to analyze
+One local app/backend. 
+Chrome + Brave + Edge + Arc. 
+Safari support. 
+Current-page extraction. 
+T&C detection. 
+Local Hugging Face LLM. 
+Structured analysis. 
+Your exact output format. 
+Section-level source references. 
+No cloud/API calls. 
+No access to anything except the page you explicitly ask it to analyze. 
