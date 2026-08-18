@@ -25,3 +25,19 @@ Overall Risk
 1. Section 4.2
 2. Section 8.1
 3. Section 12
+
+
+
+V1
+
+One local app/backend
+Chrome + Brave + Edge + Arc
+Safari support
+Current-page extraction
+T&C detection
+Local Hugging Face LLM
+Structured analysis
+Your exact output format
+Section-level source references
+No cloud/API calls
+No access to anything except the page you explicitly ask it to analyze
