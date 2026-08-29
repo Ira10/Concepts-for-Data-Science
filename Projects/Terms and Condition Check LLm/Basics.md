@@ -2,7 +2,7 @@ What I am thinking is to have one local extension in my laptop, which can work u
 After that when I open this extension any time, for example a page, where T&C is available, then I ask it to read it and give me output in this folllowing format:
 
 Overall Risk
-🟡 Moderate
+🟡 Moderate  
 
 💰 Money
 - Subscription automatically renews
