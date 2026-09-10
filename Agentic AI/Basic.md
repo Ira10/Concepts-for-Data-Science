@@ -1,7 +1,9 @@
 Watching this video and understanding from an AI - https://www.youtube.com/watch?v=AZDSpS5v57w&t=911s
 
 --------------------------------------------------------------------------------------------
-**LLM vs AI Agent**
+# LLM vs AI Agent
+
+**An LLM-based AI system is called an agent when it performs multiple steps and has substantial access to outside software.**
 
 
 # 🧠 First: What is an LLM?
