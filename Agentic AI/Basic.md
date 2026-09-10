@@ -1,3 +1,5 @@
+Watching this video and understanding from an AI - https://www.youtube.com/watch?v=AZDSpS5v57w&t=911s
+
 --------------------------------------------------------------------------------------------
 **LLM vs AI Agent**
 
