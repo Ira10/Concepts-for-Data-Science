@@ -1,7 +1,6 @@
 --------------------------------------------------------------------------------------------
 **LLM vs AI Agent**
 
-Absolutely bro 😄 Let's make this **super simple**. Forget all the complicated AI terminology for now.
 
 # 🧠 First: What is an LLM?
 
