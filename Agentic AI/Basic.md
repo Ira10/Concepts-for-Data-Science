@@ -480,3 +480,7 @@ The brain is **not the whole system**.
 That's the key idea I want you to take away.
 
 If you're learning this for your **move from data analyst → data scientist**, the next concept I'd learn is **"What exactly happens inside an AI agent when I give it a task?"** — that's where things like *tools, function calling, planning, and agent loops* start making sense.
+
+
+
+
